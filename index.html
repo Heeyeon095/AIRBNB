@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>airbnb</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="images/favicon.ico" sizes="16x16">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-3.4.0.min.js"></script>
+  <script src="javascript/script.js" defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQbOJQw6sibRcwSO8dUjsApmXE4rh31e8" async defer></script>
+
+  <script>
+    window.addEventListener( 'load', map_ready);
+    function map_ready () {
+      init_map();
+    }
+  </script>
+  
+</head>
+<body>
+
+  <!-- header 영역 -->
+  
+  <header class="clear">
+
+    <div class="logo fl"></div>
+
+    <div class="little-search fl">
+  
+      <button class="little-search-bt fl">어디든지</button>
+  
+      <button class="little-search-bt fl">언제든 일주일</button>
+  
+      <button class="little-search-bt fl">게스트 추가</button>
+  
+      <div class="little-search-icon fr">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+
+
+
+      <!-- 반응형 -->
+
+      <div class="header-min-search clear">
+        <div class="header-min-search-icon fl">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <div class="header-min-search-text fl">
+          <p>어디든지</p>
+          <span>언제든 일주일 · 게스트 추가</span>
+        </div>
+  
+        <div class="header-min-search-setting fr">
+          <i class="fa-solid fa-sliders"></i>
+        </div>
+      
+      </div>
+
+    </div>
+
+    <!-- little-search 영역 끝 -->
+
+
+    
+    <div class="header-right fr">
+      <div class="do-airbnb fl">
+        당신의 공간을 에어비앤비하세요
+      </div>
+      <div class="header-glober fl">
+        <i class="fa-solid fa-globe"></i>
+      </div>
+      <div class="header-profile fl">
+        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-circle-user"></i>
+      </div>
+    </div>
+
+
+    <div class="header-join">
+      <a href="#"><p>로그인</p></a>
+      <a href="#"><p>회원가입</p></a>
+      <span></span>
+      <a href="#"><p>당신의 공간을 에어비앤비하세요</p></a>
+      <a href="#"><p>체험 호스팅하기</p></a>
+      <a href="#"><p>도움말</p></a>
+    </div>
+
+
+  </header>
+
+  <!-- header 영역 끝 -->
+
+
+  <!-- catergory bar 영역 -->
+  <div class="category-bar clear">
+
+    <div class="swiper-wrapper">
+      
+      <div class="swiper-slide fl on">
+        <div class="category-con-icon"><img src="images/3b1eb541-46d9-4bef-abc4-c37d77e3c21b.jpg" alt="최고의 전망 아이콘"></div>
+        <p>최고의 전망</p>
+        <div class="category-con-bar"></div>
+      </div>
+      <div class="swiper-slide hanok-icon fl">
+        <div class="category-con-icon"><img src="images/51f5cf64-5821-400c-8033-8a10c7787d69.jpg" alt="한옥 아이콘"></div>
+        <p>한옥</p>
+        <div class="category-con-bar"></div>
+        <div class="point"></div>
+      </div>
+      <div class="swiper-slide wow-icon fl">
+        <div class="category-con-icon"><img src="images/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg" alt="기상천외한 숙소 아이콘"></div>
+        <p>기상천외한 숙소</p>
+        <div class="category-con-bar"></div>
+        <div class="point2"></div>
+      </div>
+      <div class="swiper-slide mountain-icon fl">
+        <div class="category-con-icon"><img src="images/248f85bf-e35e-4dc3-a9a1-e1dbff9a3db4.jpg" alt="세상의 꼭대기"></div>
+        <p>세상의 꼭대기</p>
+        <div class="category-con-bar"></div>
+        <div class="point2"></div>
+      </div>
+      <div class="swiper-slide fl">
+        <div class="category-con-icon"><img src="images/bcd1adc0-5cee-4d7a-85ec-f6730b0f8d0c.jpg" alt="해변 바로 앞"></div>
+        <p>해변 바로 앞</p>
+        <div class="category-con-bar"></div>
+      </div>
+      <div class="swiper-slide fl">
+        <div class="category-con-icon"><img src="images/3726d94b-534a-42b8-bca0-a0304d912260.jpg" alt="인기 급상승 아이콘"></div>
+        <p>인기 급상승</p>
+        <div class="category-con-bar"></div>
+      </div>
+      <div class="swiper-slide fl">
+        <div class="category-con-icon"><img src="images/6ad4bd95-f086-437d-97e3-14d12155ddfe.jpg" alt="한적한 시골"></div>
+          <p>한적한 시골</p>
+          <div class="category-con-bar"></div>
+        </div>
+      <div class="swiper-slide fl">
+        <div class="category-con-icon"><img src="images/ca25c7f3-0d1f-432b-9efa-b9f5dc6d8770.jpg" alt="캠핑장"></div>
+          <p>캠핑장</p>
+          <div class="category-con-bar"></div>
+        </div>
+      <div class="swiper-slide fl">
+        <div class="category-con-icon"><img src="images/35919456-df89-4024-ad50-5fcb7a472df9.jpg" alt="초소형 주택"></div>
+          <p>초소형 주택</p>
+          <div class="category-con-bar"></div>
+        </div>
+      <div class="swiper-slide fl">
+        <div class="category-con-icon"><img src="images/8e507f16-4943-4be9-b707-59bd38d56309.jpg" alt="섬"></div>
+          <p>섬</p>
+          <div class="category-con-bar"></div>
+        </div>
+      <div class="swiper-slide fl">
+        <div class="category-con-icon"><img src="images/78ba8486-6ba6-4a43-a56d-f556189193da.jpg" alt="저택"></div>
+          <p>저택</p>
+          <div class="category-con-bar"></div>
+        </div>
+      <div class="swiper-slide fl">
+        <div class="category-con-icon"><img src="images/50861fca-582c-4bcc-89d3-857fb7ca6528.jpg" alt="디자인"></div>
+          <p>디자인</p>
+          <div class="category-con-bar"></div>
+        </div>
+      <div class="swiper-slide fl">
+        <div class="category-con-icon"><img src="images/aaa02c2d-9f0d-4c41-878a-68c12ec6c6bd.jpg" alt="농장"></div>
+          <p>농장</p>
+          <div class="category-con-bar"></div>
+        </div>
+      <div class="swiper-slide fl">
+        <div class="category-con-icon"><img src="images/c0fa9598-4e37-40f3-b734-4bd0e2377add.jpg" alt="신규"></div>
+          <p>신규</p>
+          <div class="category-con-bar"></div>
+        </div>
+      <div class="swiper-slide fl">
+        <div class="category-con-icon"><img src="images/a6dd2bae-5fd0-4b28-b123-206783b5de1d.jpg" alt="사막"></div>
+          <p>사막</p>
+          <div class="category-con-bar"></div>
+        </div>
+      <div class="swiper-slide fl">
+        <div class="category-con-icon"><img src="images/9a2ca4df-ee90-4063-b15d-0de7e4ce210a.jpg" alt="속세를 벗어난 숙소"></div>
+          <p>속세를 벗어난 숙소</p>
+          <div class="category-con-bar"></div>
+      </div>
+      <div class="swiper-slide fl">
+        <div class="category-con-icon"><img src="images/ee9e2a40-ffac-4db9-9080-b351efc3cfc4.jpg" alt="열대 지역"></div>
+          <p>열대 지역</p>
+          <div class="category-con-bar"></div>
+      </div>
+      <div class="swiper-slide fl">
+        <div class="category-con-icon"><img src="images/ed8b9e47-609b-44c2-9768-33e6a22eccb2.jpg" alt="상징적 도시"></div>
+          <p>상징적 도시</p>
+          <div class="category-con-bar"></div>
+      </div>
+      <div class="swiper-slide fl">
+        <div class="category-con-icon"><img src="images/f0c5ca0f-5aa0-4fe5-b38d-654264bacddf.jpg
+          " alt="키즈"></div>
+          <p>키즈</p>
+          <div class="category-con-bar"></div>
+      </div>
+
+    </div>
+      
+    <div class="category-bar-filter-wrap">
+
+      <div class="category-bar-filter">
+        <span>전체보기</span>
+      </div>
+
+      <div class="category-bar-filter-box clear">
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+    <!-- 컨텐츠 영역 -->
+
+  <div class="contents-wrap clear">
+
+    <div class="contents fl mountain">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-heart" style="color: #ff144f;" class="con-heart"></i>
+      <div class="con-img">
+        <img src="images/fe92456e-6d0b-4758-a0fa-bb80bf4f4ac1.png" alt="">
+        
+      </div>
+      <div class="con-wrap clear">
+        <div class="con-score fr">
+          <i class="fa-solid fa-star fl"></i>
+          <p class="fl">5.0</p>
+          <span></span>
+        </div>
+        <div class="con-text fl">
+          <p>Fairplay, 콜로라도, 미국</p>
+          <span>해발 3,351m</span>
+          <span>4월 2일 ~ 7일</span>
+          <p>₩695,528 /박</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contents fl hanok">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-heart" style="color: #ff144f;" class="con-heart"></i>
+      <div class="con-img">
+        <img src="images/45fe0ffd-7569-4bad-8ccc-620d0a625c65.png" alt="">
+        
+      </div>
+      <div class="con-wrap clear">
+        <div class="con-score fr">
+          <i class="fa-solid fa-star fl"></i>
+          <p class="fl">4.88</p>
+          <span></span>
+        </div>
+        <div class="con-text fl">
+          <p>Samgye-myeon, Jangseong-gun, 전라남도, 한국</p>
+          <span>250km 거리</span>
+          <span>3월 14일 ~ 20일</span>
+          <p>₩278,637 /박</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contents fl wow">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-heart" style="color: #ff144f;" class="con-heart"></i>
+      <div class="con-img">
+        <img src="images/d0e3bb05-a96a-45cf-af92-980269168096.png" alt="">
+      </div>
+      <div class="con-wrap clear">
+        <div class="con-score fr">
+          <i class="fa-solid fa-star fl"></i>
+          <p class="fl">4.82</p>
+          <span></span>
+        </div>
+        <div class="con-text fl">
+          <p>Rasnow Romacril, 루마니아</p>
+          <span>7,907km 거리</span>
+          <span>3월 24일 ~ 29일</span>
+          <p>₩159,108 /박</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contents fl wow">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-heart" style="color: #ff144f;" class="con-heart"></i>
+      <div class="con-img">
+        <img src="images/6481d1e8-a4d9-4f24-99e7-efccefb9132d.jpg" alt="">
+        
+      </div>
+      <div class="con-wrap clear">
+        <div class="con-score fr">
+          <i class="fa-solid fa-star fl"></i>
+          <p class="fl">4.92</p>
+          <span></span>
+        </div>
+        <div class="con-text fl">
+          <p>Tampaksiring, 인도네시아</p>
+          <span>5,258km 거리</span>
+          <span>3월 15일 ~ 20일</span>
+          <p>₩534,330 /박</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contents fl mountain">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-heart" style="color: #ff144f;" class="con-heart"></i>
+      <div class="con-img">
+        <img src="images/81006167-98ae-41af-b7db-0cb92ea2f843.jpg" alt="">
+        
+      </div>
+      <div class="con-wrap clear">
+        <div class="con-score fr">
+          <i class="fa-solid fa-star fl"></i>
+          <p class="fl">4.86</p>
+          <span></span>
+        </div>
+        <div class="con-text fl">
+          <p>Pintag, 에콰도르</p>
+          <span>해발 3,440m</span>
+          <span>4월 1일 ~ 6일</span>
+          <p>₩223,564 /박</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contents fl hanok">
+      <i class="fa-regular fa-heart"></i>
+      
+      <i class="fa-solid fa-heart" style="color: #ff144f;" class="con-heart"></i>
+      <div class="con-img">
+        <img src="images/28fb38b8-c991-4755-98f8-695691b3298f.png" alt="">
+      </div>
+      <div class="con-wrap clear">
+        <div class="con-score fr">
+          <i class="fa-solid fa-star fl"></i>
+          <p class="fl">4.7</p>
+          <span></span>
+        </div>
+        <div class="con-text fl">
+          <p>Andong, 한국</p>
+          <span>250km 거리</span>
+          <span>3월 20일 ~ 26일</span>
+          <p>₩195,403 /박</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contents fl mountain">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-heart" style="color: #ff144f;" class="con-heart"></i>
+      <div class="con-img">
+        <img src="images/33dae5b5-6141-4e56-83ee-253b88d31159.png" alt="">
+        
+      </div>
+      <div class="con-wrap clear">
+        <div class="con-score fr">
+          <i class="fa-solid fa-star fl"></i>
+          <p class="fl">5.0</p>
+          <span></span>
+        </div>
+        <div class="con-text fl">
+          <p>Cusco, 페루</p>
+          <span>해발 3,366m</span>
+          <span>4월 1일 ~ 5일</span>
+          <p>₩178,853 /박</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="contents fl hanok">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-heart" style="color: #ef144f;" class="con-heart"></i>
+      <div class="con-img">
+        <img src="images/888d6fad-010f-41ee-870f-095e8bf3a7ed.png" alt="">
+      </div>
+      <div class="con-wrap clear">
+        <div class="con-score fr">
+          <i class="fa-solid fa-star fl"></i>
+          <p class="fl">4.7</p>
+          <span></span>
+        </div>
+        <div class="con-text fl">
+          <p>완산구, 전주시, 한국</p>
+          <span>196km 거리</span>
+          <span>4월 6일 ~ 13일</span>
+          <p>₩317,899 /박</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contents fl wow">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-heart" style="color: #ff144f;" class="con-heart"></i>
+      <div class="con-img">
+        <img src="images/c5282c79-8d6c-48f9-8d2c-68e80234e12b.png" alt="">
+      </div>
+      <div class="con-wrap clear">
+        <div class="con-score fr">
+          <i class="fa-solid fa-star fl"></i>
+          <p class="fl">4.9</p>
+          <span></span>
+        </div>
+        <div class="con-text fl">
+          <p>Selat, 인도네시아</p>
+          <span>5,256km 거리</span>
+          <span>3월 29일 ~ 4월 4일</span>
+          <p>₩368,196 /박</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contents fl hanok">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-heart" style="color: #ef144f;" class="con-heart"></i>
+      <div class="con-img">
+        <img src="images/cdcad94d-8d6d-4072-9c03-aeeaf20cd764.png" alt="">
+      </div>
+      <div class="con-wrap clear">
+        <div class="con-score fr">
+          <i class="fa-solid fa-star fl"></i>
+          <p class="fl">4.7</p>
+          <span></span>
+        </div>
+        <div class="con-text fl">
+          <p>Ongryong-myeon, Gwangyang-si, 한국</p>
+          <span>287km 거리</span>
+          <span>4월 15일 ~ 20일</span>
+          <p>₩171,177 /박</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contents fl hanok">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-heart" style="color: #ef144f;" class="con-heart"></i>
+      <div class="con-img">
+        <img src="images/9c5d7336-ebdd-492d-bca1-bc5868d539bf.png" alt="">
+      </div>
+      <div class="con-wrap clear">
+        <div class="con-score fr">
+          <i class="fa-solid fa-star fl"></i>
+          <p class="fl">4.7</p>
+          <span></span>
+        </div>
+        <div class="con-text fl">
+          <p>Bonghwa-eup, Bonghwa-gun, 한국</p>
+          <span>169km 거리</span>
+          <span>4월 2일 ~ 7일</span>
+          <p>₩190,000 /박</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contents fl mountain">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-heart" style="color: #ff144f;" class="con-heart"></i>
+      <div class="con-img">
+        <img src="images/5c5c5f58-8224-4c47-92df-69263f4170e4.png" alt="">
+        
+      </div>
+      <div class="con-wrap clear">
+        <div class="con-score fr">
+          <i class="fa-solid fa-star fl"></i>
+          <p class="fl">4.82</p>
+          <span></span>
+        </div>
+        <div class="con-text fl">
+          <p>Clear Creek Country, 콜로라도, 미국</p>
+          <span>해발 3,410m</span>
+          <span>4월 2일 ~ 7일</span>
+          <p>₩569,879 /박</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contents fl wow">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-heart" style="color: #ff144f;" class="con-heart"></i>
+      <div class="con-img">
+        <img src="images/e25a9b25-fa98-4160-bfd1-039287bf38b6.png" alt="">
+      </div>
+      <div class="con-wrap clear">
+        <div class="con-score fr">
+          <i class="fa-solid fa-star fl"></i>
+          <p class="fl">4.97</p>
+          <span></span>
+        </div>
+        <div class="con-text fl">
+          <p>EI Nido, 필리핀</p>
+          <span>3,050km 거리</span>
+          <span>4월 12일 ~ 17일</span>
+          <p>₩1,013,820 /박</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contents fl mountain">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-heart" style="color: #ff144f;" class="con-heart"></i>
+      <div class="con-img">
+        <img src="images/6bc4e7ab-62b4-424a-9c8a-2e56d2e0364b.png" alt="">
+        
+      </div>
+      <div class="con-wrap clear">
+        <div class="con-score fr">
+          <i class="fa-solid fa-star fl"></i>
+          <p class="fl">4.76</p>
+          <span></span>
+        </div>
+        <div class="con-text fl">
+          <p>San Juan, 에콰도르</p>
+          <span>해발 3,596m</span>
+          <span>4월 9일 ~ 14일</span>
+          <p>₩147,553 /박</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contents fl wow">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-heart" style="color: #ff144f;" class="con-heart"></i>
+      <div class="con-img">
+        <img src="images/4b0af8ea-007e-48e9-b098-527ff46d4daf.png" alt="">
+      </div>
+      <div class="con-wrap clear">
+        <div class="con-score fr">
+          <i class="fa-solid fa-star fl"></i>
+          <p class="fl">4.47</p>
+          <span></span>
+        </div>
+        <div class="con-text fl">
+          <p>West Nusa Tenggara, 인도네시아</p>
+          <span>5,237km 거리</span>
+          <span>3월 23일 ~ 28일</span>
+          <p>₩189,844 /박</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contents fl wow">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-heart" style="color: #ff144f;" class="con-heart"></i>
+      <div class="con-img">
+        <img src="images/6721fc25-afe0-4f35-b181-212ec8ddc186.png" alt="">
+      </div>
+      <div class="con-wrap clear">
+        <div class="con-score fr">
+          <i class="fa-solid fa-star fl"></i>
+          <p class="fl">4.98</p>
+          <span></span>
+        </div>
+        <div class="con-text fl">
+          <p>Gaular, 노르웨이</p>
+          <span>7,805km 거리</span>
+          <span>3월 27일 ~ 4월 2일</span>
+          <p>₩489,153 /박</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- 지도 표시 영역 -->
+    <div class="section">
+      <div id="map"></div>
+    </div>
+
+
+    <!-- 지도보기, 목록보기 버튼 -->
+    <div class="button-wrap">
+      <div class="map-button on">
+        <span>지도 표시하기</span>
+        <i class="fa-solid fa-map" style="color: #ffffff;"></i>
+      </div>
+      <div class="list-button">
+        <span>목록 보기</span>
+        <i class="fa-solid fa-list" style="color: #ffffff;"></i>
+      </div>
+    </div>
+
+
+
+    
+
+
+  <!-- 푸터 영역 -->
+  <footer>
+    <div class="ft-wrap">
+      <div class="ft-top">
+        <div class="ft-top-left">
+          <p>
+            &copy; 2023 Heeyeon, inc. · 개인정보 처리방침 · 이용약관 · 사이트맵 · 한국의 변경된 환불 정책 · 회사 세부정보
+          </p>
+        </div>
+        <div class="ft-top-right">
+          <p>한국어 (KR) ₩ KRW 지원 및 참고 자료</p>
+        </div>
+      </div>
+      <div class="ft-bt">
+        <div class="ft-bt-text">
+          이 웹사이트는 포트폴리오 용으로 공식 사이트와 다릅니다. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto sunt magni illum quos aperiam maxime, velit earum facere rerum, quasi quam non veniam. Dicta, vitae nam tenetur nemo illum cum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad sed ratione voluptate minima et ex dolorem maxime laborum quidem, culpa deserunt atque inventore facilis quisquam enim. Aperiam corrupti dolore numquam.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+  </html>
